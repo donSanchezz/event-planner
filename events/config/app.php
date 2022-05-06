@@ -1,5 +1,8 @@
 <?php
 
+use Brian2694\Toastr\ToastrServiceProvider;
+use Cornford\Googlmapper\Facades\MapperFacade;
+
 return [
 
     /*
@@ -161,6 +164,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        
 
         /*
          * Package Service Providers...
@@ -174,6 +178,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Cornford\Googlmapper\MapperServiceProvider::class,
+        Brian2694\Toastr\ToastrServiceProvider::class,
 
     ],
 
@@ -229,6 +235,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
+        'Toastr' => Brian2694\Toastr\Facades\Toastr::class,
 
     ],
 
